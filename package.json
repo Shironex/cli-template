@@ -1,10 +1,10 @@
 {
   "name": "cli-template",
   "version": "1.0.1",
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "cli-template": "./dist/index.mjs"
+    "cli-template": "./dist/index.js"
   },
   "keywords": [
     "cli",
