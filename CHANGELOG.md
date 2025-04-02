@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Shironex/cli-template/compare/v1.0.1...v1.0.2) (2025-04-02)
+
+
+### Bug Fixes
+
+* update main entry point and CLI bin path to use .js extension ([13f201c](https://github.com/Shironex/cli-template/commit/13f201cfffca13226f5ee114e4d6a5b2d928edac))
+
 ## [1.0.1](https://github.com/Shironex/cli-template/compare/v1.0.0...v1.0.1) (2025-04-02)
 
 
