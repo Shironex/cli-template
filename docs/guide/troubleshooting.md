@@ -142,8 +142,7 @@ try {
 ### Documentation
 
 - Check the [documentation](../) for detailed guides
-- Review [examples](../examples) for common use cases
-- Read [API reference](../api) for function documentation
+- Read [API reference](./api) for function documentation
 
 ### Community Support
 
