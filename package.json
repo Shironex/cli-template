@@ -1,0 +1,16 @@
+{
+  "name": "cli-template",
+  "version": "0.0.0",
+  "main": "index.js",
+  "keywords": [
+    "cli",
+    "template",
+    "commander.js"
+  ],
+  "author": "Shironex",
+  "license": "MIT",
+  "description": "CLI template for creating a CLI tool using commander.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
