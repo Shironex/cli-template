@@ -40,7 +40,7 @@
     "chalk": "^5.4.1",
     "commander": "^13.1.0",
     "dotenv": "^16.5.0",
-    "inquirer": "^12.5.2",
+    "inquirer": "^12.7.0",
     "ora": "^8.2.0"
   },
   "devDependencies": {
