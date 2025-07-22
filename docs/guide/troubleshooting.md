@@ -114,9 +114,11 @@ Debug output includes:
    - Verify required fields
 
 3. **Runtime Errors**
+
    ```
    Error: Operation failed
    ```
+
    - Check system resources
    - Verify dependencies
 
