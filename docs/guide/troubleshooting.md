@@ -117,6 +117,7 @@ Debug output includes:
    ```
    Error: Operation failed
    ```
+
    - Check system resources
    - Verify dependencies
 
