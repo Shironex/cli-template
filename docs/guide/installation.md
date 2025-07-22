@@ -26,6 +26,7 @@ Before you begin, make sure you have:
    ```
 
 3. Update package.json:
+
    - Change the `name` field to your CLI name
    - Update the `description` field
    - Update the `author` field

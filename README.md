@@ -34,6 +34,7 @@ A modern template for building command-line applications with TypeScript, Comman
    ```
 
 3. Update package.json:
+
    - Change the `name` field to your CLI name
    - Update the `description` field
    - Update the `author` field
