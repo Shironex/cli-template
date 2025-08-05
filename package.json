@@ -36,7 +36,7 @@
   },
   "packageManager": "pnpm@9.12.3",
   "dependencies": {
-    "chalk": "^5.4.1",
+    "chalk": "^5.5.0",
     "commander": "^14.0.0",
     "dotenv": "^17.2.1",
     "inquirer": "^12.9.0",
