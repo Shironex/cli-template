@@ -4,6 +4,8 @@ import { Command } from 'commander';
 import { getPackageJsonVersion } from './utils/package-helper.js';
 import { logger } from './utils/logger.js';
 import { interactiveCommand } from './commands/interactive.js';
+import { tableCommand } from './commands/table.js';
+import { progressCommand } from './commands/progress.js';
 
 const program = new Command();
 
@@ -26,5 +28,7 @@ program
   });
 
 program.addCommand(interactiveCommand);
+program.addCommand(tableCommand);
+program.addCommand(progressCommand);
 
 program.parse(process.argv);
