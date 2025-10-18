@@ -17,6 +17,8 @@ A modern template for building command-line applications with TypeScript, Comman
 - 📚 **Documentation**: VitePress documentation with guides and examples
 - 🔧 **Interactive Mode**: Built-in support for interactive CLI commands
 - 🛡️ **Type Safety**: Full TypeScript support with strict type checking
+- 📊 **Table Output**: Display data in formatted tables with cli-table3
+- 📈 **Progress Bars**: Visual progress indicators with cli-progress
 
 ## Quick Start
 
@@ -55,6 +57,31 @@ A modern template for building command-line applications with TypeScript, Comman
    pnpm dev
    ```
 
+## Available Commands
+
+```bash
+# Basic commands
+cli-template hello [name]              # Say hello to someone
+cli-template hello --capitalize        # Capitalize the greeting
+
+# Interactive mode
+cli-template interactive               # Start interactive menu with all features
+
+# Table examples
+cli-template table                     # Show simple table (default)
+cli-template table --style simple      # Simple table example
+cli-template table --style complex     # Complex table with colors
+cli-template table --style custom      # Custom styled table
+cli-template table --style all         # Show all table examples
+
+# Progress bar examples
+cli-template progress                  # Show simple progress bar (default)
+cli-template progress --type simple    # Simple progress bar
+cli-template progress --type custom    # Custom styled progress bar
+cli-template progress --type multi     # Multiple progress bars
+cli-template progress --type all       # Show all progress examples
+```
+
 ## Development Commands
 
 ```bash
@@ -86,16 +113,22 @@ pnpm unlink --global  # Unlink CLI from global installation
 ```
 cli-template/
 ├── src/
-│   ├── commands/     # CLI commands
-│   ├── utils/        # Utility functions
-│   ├── types/        # TypeScript type definitions
-│   └── index.ts      # Main entry point
-├── tests/            # Test files
-├── docs/             # Documentation
-├── package.json      # Project configuration
-├── tsconfig.json     # TypeScript configuration
-├── vitest.config.ts  # Vitest configuration
-└── tsup.config.ts    # Build configuration
+│   ├── commands/           # CLI commands
+│   │   ├── interactive.ts  # Interactive menu command
+│   │   ├── table.ts        # Table display examples
+│   │   └── progress.ts     # Progress bar examples
+│   ├── utils/              # Utility functions
+│   │   ├── logger.ts       # Colored logging utility
+│   │   ├── package-helper.ts # Package.json helper
+│   │   └── errors.ts       # Custom error classes
+│   ├── types/              # TypeScript type definitions
+│   └── index.ts            # Main entry point
+├── tests/                  # Test files
+├── docs/                   # Documentation
+├── package.json            # Project configuration
+├── tsconfig.json           # TypeScript configuration
+├── vitest.config.ts        # Vitest configuration
+└── tsup.config.ts          # Build configuration
 ```
 
 ## Documentation
@@ -135,9 +168,12 @@ If you encounter any issues or have questions, please:
 
 ## Roadmap
 
-- [ ] Add more example commands
+- [x] Add table output examples
+- [x] Add progress bar examples
+- [ ] Add config file support (cosmiconfig)
+- [ ] Add auto-update notifications
+- [ ] Add shell completion support
 - [ ] Add performance benchmarking
-- [ ] Add more interactive mode features
 - [ ] Add plugin system
 - [ ] Add more test utilities
 
