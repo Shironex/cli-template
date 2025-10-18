@@ -13,6 +13,8 @@ CLI Template is a modern, production-ready template for building command-line ap
 - GitHub Actions for CI/CD
 - VitePress documentation
 - Interactive mode support
+- Table output formatting with cli-table3
+- Progress bars with cli-progress
 - And much more!
 
 ## Quick Start
@@ -46,6 +48,8 @@ CLI Template is a modern, production-ready template for building command-line ap
 - [Installation](/guide/installation) - Learn how to install and set up the template
 - [Basic Commands](/guide/basic-commands) - Understand the built-in commands and how to create your own
 - [Interactive Mode](/guide/interactive-mode) - Explore the interactive command mode
+- [Table Output](/guide/table-output) - Display data in formatted tables
+- [Progress Bars](/guide/progress-bars) - Visual progress indicators for long-running operations
 - [Testing](/guide/testing) - Learn how to write and run tests
 - [Contributing](/guide/contributing) - Guidelines for contributing to the project
 - [Best Practices](/guide/best-practices) - Tips and best practices for CLI development

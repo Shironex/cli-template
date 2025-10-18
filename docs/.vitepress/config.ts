@@ -27,6 +27,8 @@ export default defineConfig({
           items: [
             { text: 'Basic Commands', link: '/guide/basic-commands' },
             { text: 'Interactive Mode', link: '/guide/interactive-mode' },
+            { text: 'Table Output', link: '/guide/table-output' },
+            { text: 'Progress Bars', link: '/guide/progress-bars' },
             { text: 'Testing', link: '/guide/testing' },
             { text: 'Best Practices', link: '/guide/best-practices' },
           ],

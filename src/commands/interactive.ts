@@ -12,6 +12,8 @@ export async function interactiveAction() {
         choices: [
           { name: 'Say hello', value: 'hello' },
           { name: 'Show version', value: 'version' },
+          { name: 'Display table examples', value: 'table' },
+          { name: 'Show progress bar demo', value: 'progress' },
           { name: 'Exit', value: 'exit' },
         ],
       },
@@ -33,6 +35,42 @@ export async function interactiveAction() {
         const { getPackageJsonVersion } = await import('../utils/package-helper.js');
         logger.info(`Current version: ${getPackageJsonVersion()}`);
         break;
+      case 'table': {
+        const tableStyleAnswer = await inquirer.prompt([
+          {
+            type: 'list',
+            name: 'style',
+            message: 'Which table style would you like to see?',
+            choices: [
+              { name: 'Simple table', value: 'simple' },
+              { name: 'Complex table with colors', value: 'complex' },
+              { name: 'Custom styled table', value: 'custom' },
+              { name: 'All examples', value: 'all' },
+            ],
+          },
+        ]);
+        const { tableAction } = await import('./table.js');
+        await tableAction({ style: tableStyleAnswer.style });
+        break;
+      }
+      case 'progress': {
+        const progressTypeAnswer = await inquirer.prompt([
+          {
+            type: 'list',
+            name: 'type',
+            message: 'Which progress bar type would you like to see?',
+            choices: [
+              { name: 'Simple progress bar', value: 'simple' },
+              { name: 'Custom styled progress bar', value: 'custom' },
+              { name: 'Multiple progress bars', value: 'multi' },
+              { name: 'All examples', value: 'all' },
+            ],
+          },
+        ]);
+        const { progressAction } = await import('./progress.js');
+        await progressAction({ type: progressTypeAnswer.type });
+        break;
+      }
       case 'exit':
         logger.info('Goodbye!');
         break;
