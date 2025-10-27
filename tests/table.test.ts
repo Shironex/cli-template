@@ -3,15 +3,17 @@ import { tableAction } from '@/commands/table';
 import { logger } from '@/utils/logger';
 
 vi.mock('@/utils/logger');
-vi.mock('cli-table3', () => ({
-  default: vi.fn().mockImplementation(() => ({
-    push: vi.fn(),
-    toString: vi.fn().mockReturnValue('table'),
-  })),
-}));
+vi.mock('cli-table3', () => {
+  class MockTable {
+    push = vi.fn();
+    toString = vi.fn().mockReturnValue('table');
+  }
+
+  return { default: MockTable };
+});
 
 const mockExit = vi.spyOn(process, 'exit').mockImplementation((() => {}) as () => never);
-const mockLog = vi.spyOn(console, 'log').mockImplementation(() => {});
+vi.spyOn(console, 'log').mockImplementation(() => {});
 
 describe('table command', () => {
   beforeEach(() => {
