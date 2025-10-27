@@ -119,11 +119,11 @@ async function showMultiProgress(): Promise<void> {
 
   const speeds = [1.2, 0.8, 1.5];
 
-  while (bars.some((bar, index) => bar.value < files[index].size)) {
+  while (bars.some((bar, index) => bar.getProgress() < files[index].size)) {
     await sleep(50);
 
     bars.forEach((bar, index) => {
-      if (bar.value < files[index].size) {
+      if (bar.getProgress() < files[index].size) {
         bar.increment(speeds[index]);
       }
     });

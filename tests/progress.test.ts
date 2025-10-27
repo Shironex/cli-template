@@ -5,15 +5,23 @@ import { logger } from '@/utils/logger';
 vi.mock('@/utils/logger');
 vi.mock('cli-progress', () => ({
   default: {
-    SingleBar: vi.fn().mockImplementation(() => ({
-      start: vi.fn(),
-      update: vi.fn(),
-      stop: vi.fn(),
-    })),
-    MultiBar: vi.fn().mockImplementation(() => ({
-      create: vi.fn(() => ({ value: 100, increment: vi.fn() })),
-      stop: vi.fn(),
-    })),
+    SingleBar: vi.fn(function SingleBarMock(this: unknown) {
+      return {
+        start: vi.fn(),
+        update: vi.fn(),
+        stop: vi.fn(),
+      };
+    }),
+    MultiBar: vi.fn(function MultiBarMock(this: unknown) {
+      return {
+        create: vi.fn(() => ({
+          value: 100,
+          increment: vi.fn(),
+          getProgress: vi.fn().mockReturnValue(100),
+        })),
+        stop: vi.fn(),
+      };
+    }),
     Presets: { shades_classic: {}, shades_grey: {} },
   },
 }));
