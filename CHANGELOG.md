@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Shironex/cli-template/compare/v1.2.0...v1.2.1) (2025-11-15)
+
+
+### Bug Fixes
+
+* **ci:** correct pnpm version ([0be07dc](https://github.com/Shironex/cli-template/commit/0be07dc143e513b733856bb361591b36c3eb6fa0))
+
 # [1.2.0](https://github.com/Shironex/cli-template/compare/v1.1.0...v1.2.0) (2025-11-15)
 
 
