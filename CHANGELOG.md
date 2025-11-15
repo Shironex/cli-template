@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Shironex/cli-template/compare/v1.1.0...v1.2.0) (2025-11-15)
+
+
+### Features
+
+* **ci:** add GitHub workflows and configurations ([8925074](https://github.com/Shironex/cli-template/commit/89250748843f0295072a9da691865ee7bad0744b))
+
 # [1.1.0](https://github.com/Shironex/cli-template/compare/v1.0.2...v1.1.0) (2025-10-27)
 
 
