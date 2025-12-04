@@ -32,7 +32,8 @@
     "test:coverage": "vitest run --coverage",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "quallity:check": "pnpm run lint && pnpm run test && pnpm run docs:build && pnpm run format:check"
   },
   "packageManager": "pnpm@9.12.3",
   "dependencies": {
